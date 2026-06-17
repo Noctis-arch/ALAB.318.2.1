@@ -4,10 +4,8 @@ const path = require("path");
 const app = express();
 const PORT = 3000;
 
-// view engine
 app.set("view engine", "ejs");
 
-// middleware
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static("public"));
 
@@ -16,18 +14,17 @@ app.use((req, res, next) => {
   next();
 });
 
-// routes
 app.get("/", (req, res) => {
   res.render("index", {
-    title: "Home Page",
+    title: "Home",
     message: "Welcome to my Express app"
   });
 });
 
 app.get("/about", (req, res) => {
   res.render("about", {
-    title: "About Page",
-    message: "This page uses another EJS view."
+    title: "About",
+    message: "About this app"
   });
 });
 
@@ -48,5 +45,5 @@ app.get("/download", (req, res) => {
 });
 
 app.listen(PORT, () => {
-  console.log(`Server is running at http://localhost:${PORT}`);
+  console.log(`Server running at http://localhost:${PORT}`);
 });
