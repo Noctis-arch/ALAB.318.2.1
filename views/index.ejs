@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title><%= title %></title>
+</head>
+<body>
+  <nav>
+    <a href="/">Home</a>
+    <a href="/about">About</a>
+    <a href="/user/Carlos">User Route</a>
+  </nav>
+
+  <h1><%= message %></h1>
+
+  <img src="/dog.png" alt="My dog" width="300">
+
+  <br><br>
+
+  <a href="/download">
+    <button>Download Image</button>
+  </a>
+
+  <h2>Form</h2>
+
+  <form action="/submit" method="POST">
+    <input type="text" name="username" placeholder="Enter your name">
+    <button type="submit">Submit</button>
+  </form>
+</body>
+</html>
